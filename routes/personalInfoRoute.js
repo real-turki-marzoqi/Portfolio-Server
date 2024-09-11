@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const {getPersonalIno , createPersonalInfo} = require('../services/presonalInfoServices')
+const {getPersonalIno , createPersonalInfo , updatePersonalInfo} = require('../services/presonalInfoServices')
 
-const {createPersonalInfoValidator} = require('../utils/validators/personalInfoValidator')
+const {createPersonalInfoValidator , updatePersonalInfoValidator} = require('../utils/validators/personalInfoValidator')
 
 
 
@@ -15,6 +15,7 @@ router
 
 router
   .route("/:id")
+  .put(updatePersonalInfoValidator ,updatePersonalInfo )
   
 
 
