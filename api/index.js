@@ -13,7 +13,7 @@ const dotenv = require("dotenv");
 dotenv.config({ path: "../config.env" });
 
 const ApiErrors = require("../utils/ApiErrors");
-const globalErrors = require("../middleWares/errorMiddleWare");
+const globalErrors = require("../middleWares/validatorMiddleWare");
 
 const personalInfoRoute = require('../routes/personalInfoRoute')
 

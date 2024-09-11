@@ -1,5 +1,5 @@
 const { check } = require("express-validator");
-const validatorMiddleWare = require("../../middlewares/validatorMiddleWare");
+const validatorMiddleWare = require("../../middleWares/validatorMiddleWare");
 
 // Validator for creating personal information
 exports.createPersonalInfoValidator = [
