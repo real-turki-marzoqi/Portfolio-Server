@@ -1,22 +1,24 @@
 const express = require("express");
 const router = express.Router();
-const {getPersonalIno , createPersonalInfo , updatePersonalInfo} = require('../services/presonalInfoServices')
+const {
+  getPersonalIno,
+  createPersonalInfo,
+  updatePersonalInfo,
+} = require("../services/presonalInfoServices");
 
-const {createPersonalInfoValidator , updatePersonalInfoValidator} = require('../utils/validators/personalInfoValidator')
+const {
+  createPersonalInfoValidator,
+  updatePersonalInfoValidator,
+} = require("../utils/validators/personalInfoValidator");
 
 
 
+// PERSONAL Info Routes
 router
   .route("/")
   .get(getPersonalIno)
-  .post(createPersonalInfoValidator , createPersonalInfo)
+  .post(createPersonalInfoValidator, createPersonalInfo);
 
+router.route("/:id").put(updatePersonalInfoValidator, updatePersonalInfo);
 
-
-router
-  .route("/:id")
-  .put(updatePersonalInfoValidator ,updatePersonalInfo )
-  
-
-
-  module.exports = router
+module.exports = router;

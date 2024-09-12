@@ -1,7 +1,7 @@
 const { check } = require("express-validator");
 const validatorMiddleWare = require("../../middleWares/validatorMiddleWare");
 
-// Validator for creating personal information
+// Create personal info validations
 exports.createPersonalInfoValidator = [
     // Validate name
     check('name')
@@ -24,6 +24,7 @@ exports.createPersonalInfoValidator = [
     ,validatorMiddleWare
 ];
 
+// Update personalInfo validations
 exports.updatePersonalInfoValidator = [
     check('id')
     .isMongoId().withMessage('Invalid Personal Info Id'),
