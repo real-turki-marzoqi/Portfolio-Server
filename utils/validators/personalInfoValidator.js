@@ -27,7 +27,7 @@ exports.createPersonalInfoValidator = [
 // Update personalInfo validations
 exports.updatePersonalInfoValidator = [
     check('id')
-    .isMongoId().withMessage('Invalid Personal Info Id'),
+    .isMongoId().withMessage('Invalid Personal Info Id')
 
 
         ,validatorMiddleWare
